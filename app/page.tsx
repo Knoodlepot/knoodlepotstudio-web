@@ -1,65 +1,310 @@
-import Image from "next/image";
+import ThemeToggle from "@/components/ThemeToggle";
+import AppCard from "@/components/AppCard";
+import { apps } from "@/lib/apps";
+
+/* Decorative SVG flourish */
+function GoldRule() {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: "1rem", width: "100%", maxWidth: "480px", margin: "0 auto" }}>
+      <div style={{ flex: 1, height: "1px", background: "var(--gold)", opacity: 0.4 }} />
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style={{ flexShrink: 0 }}>
+        <path d="M9 1 L10.2 6.8 L16 8 L10.2 9.2 L9 15 L7.8 9.2 L2 8 L7.8 6.8 Z" fill="var(--gold)" opacity="0.7" />
+      </svg>
+      <div style={{ flex: 1, height: "1px", background: "var(--gold)", opacity: 0.4 }} />
+    </div>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+
+      {/* ── Navigation ── */}
+      <nav
+        style={{
+          position: "sticky",
+          top: 0,
+          zIndex: 50,
+          background: "var(--nav-bg)",
+          backdropFilter: "blur(10px)",
+          borderBottom: "1px solid var(--border)",
+          padding: "0 1.5rem",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1100px",
+            margin: "0 auto",
+            height: "56px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <span
+            style={{
+              fontFamily: "var(--font-cinzel)",
+              fontSize: "0.95rem",
+              letterSpacing: "0.12em",
+              color: "var(--gold)",
+              textTransform: "uppercase",
+            }}
+          >
+            Knoodlepot Studios
+          </span>
+
+          <div style={{ display: "flex", alignItems: "center", gap: "1.25rem" }}>
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="#apps"
+              style={{
+                fontSize: "0.8rem",
+                fontFamily: "var(--font-cinzel)",
+                letterSpacing: "0.08em",
+                color: "var(--text-muted)",
+                textDecoration: "none",
+              }}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
+              Apps
+            </a>
             <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="#about"
+              style={{
+                fontSize: "0.8rem",
+                fontFamily: "var(--font-cinzel)",
+                letterSpacing: "0.08em",
+                color: "var(--text-muted)",
+                textDecoration: "none",
+              }}
             >
-              Learning
-            </a>{" "}
-            center.
+              About
+            </a>
+            <ThemeToggle />
+          </div>
+        </div>
+      </nav>
+
+      {/* ── Hero ── */}
+      <section
+        style={{
+          padding: "6rem 1.5rem 5rem",
+          textAlign: "center",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "1.5rem",
+        }}
+      >
+        {/* Overline */}
+        <p
+          style={{
+            fontFamily: "var(--font-cinzel)",
+            fontSize: "0.7rem",
+            letterSpacing: "0.25em",
+            textTransform: "uppercase",
+            color: "var(--gold)",
+            margin: 0,
+          }}
+        >
+          Independent Studio
+        </p>
+
+        {/* Main heading */}
+        <h1
+          style={{
+            fontFamily: "var(--font-cinzel)",
+            fontSize: "clamp(2rem, 6vw, 3.75rem)",
+            fontWeight: 700,
+            letterSpacing: "0.08em",
+            lineHeight: 1.15,
+            color: "var(--text)",
+            margin: 0,
+            maxWidth: "720px",
+          }}
+        >
+          Knoodlepot Studios
+        </h1>
+
+        {/* Tagline */}
+        <p
+          style={{
+            fontFamily: "var(--font-playfair)",
+            fontStyle: "italic",
+            fontSize: "clamp(1rem, 2.5vw, 1.35rem)",
+            color: "var(--text-muted)",
+            margin: 0,
+            maxWidth: "540px",
+            lineHeight: 1.6,
+          }}
+        >
+          Apps steeped in myth, lore, and Victorian wonder
+        </p>
+
+        <GoldRule />
+
+        {/* CTA */}
+        <a
+          href="#apps"
+          style={{
+            fontFamily: "var(--font-cinzel)",
+            fontSize: "0.75rem",
+            letterSpacing: "0.15em",
+            textTransform: "uppercase",
+            color: "var(--bg)",
+            background: "var(--gold)",
+            padding: "0.65rem 1.75rem",
+            borderRadius: "4px",
+            textDecoration: "none",
+            marginTop: "0.5rem",
+          }}
+        >
+          Explore the Collection
+        </a>
+      </section>
+
+      {/* ── Apps Grid ── */}
+      <section
+        id="apps"
+        style={{
+          padding: "4rem 1.5rem",
+          maxWidth: "1100px",
+          margin: "0 auto",
+          width: "100%",
+        }}
+      >
+        <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+          <h2
+            style={{
+              fontFamily: "var(--font-cinzel)",
+              fontSize: "clamp(1.1rem, 3vw, 1.5rem)",
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
+              color: "var(--text)",
+              marginBottom: "0.75rem",
+            }}
+          >
+            The Collection
+          </h2>
+          <p
+            style={{
+              fontFamily: "var(--font-playfair)",
+              fontStyle: "italic",
+              color: "var(--text-muted)",
+              fontSize: "0.95rem",
+            }}
+          >
+            Each app is a world unto itself
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+            gap: "1.25rem",
+          }}
+        >
+          {apps.map((app) => (
+            <AppCard key={app.name} app={app} />
+          ))}
         </div>
-      </main>
+      </section>
+
+      {/* ── About ── */}
+      <section
+        id="about"
+        style={{
+          padding: "5rem 1.5rem",
+          borderTop: "1px solid var(--border)",
+          maxWidth: "720px",
+          margin: "2rem auto 0",
+          width: "100%",
+          textAlign: "center",
+        }}
+      >
+        <h2
+          style={{
+            fontFamily: "var(--font-cinzel)",
+            fontSize: "1rem",
+            letterSpacing: "0.2em",
+            textTransform: "uppercase",
+            color: "var(--gold)",
+            marginBottom: "1.5rem",
+          }}
+        >
+          About the Studio
+        </h2>
+        <p
+          style={{
+            fontFamily: "var(--font-playfair)",
+            fontSize: "1.05rem",
+            lineHeight: 1.85,
+            color: "var(--text)",
+            marginBottom: "1.25rem",
+          }}
+        >
+          Knoodlepot Studios is an independent one-person studio based in the United Kingdom,
+          building mobile and web apps with a love of Victorian aesthetics, mythology, folklore,
+          and the natural world.
+        </p>
+        <p
+          style={{
+            fontFamily: "var(--font-playfair)",
+            fontStyle: "italic",
+            fontSize: "0.95rem",
+            lineHeight: 1.8,
+            color: "var(--text-muted)",
+          }}
+        >
+          Every app is crafted with care — designed to feel different from the ordinary,
+          rooted in history, and worth your time.
+        </p>
+      </section>
+
+      {/* ── Footer ── */}
+      <footer
+        style={{
+          marginTop: "auto",
+          borderTop: "1px solid var(--border)",
+          padding: "2rem 1.5rem",
+          textAlign: "center",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1100px",
+            margin: "0 auto",
+            display: "flex",
+            flexDirection: "column",
+            gap: "0.5rem",
+            alignItems: "center",
+          }}
+        >
+          <a
+            href="mailto:knoodlepot@knoodlepotstudio.com"
+            style={{
+              fontFamily: "var(--font-cinzel)",
+              fontSize: "0.75rem",
+              letterSpacing: "0.06em",
+              color: "var(--gold)",
+              textDecoration: "none",
+            }}
+          >
+            knoodlepot@knoodlepotstudio.com
+          </a>
+          <p
+            style={{
+              fontFamily: "var(--font-cinzel)",
+              fontSize: "0.65rem",
+              letterSpacing: "0.08em",
+              color: "var(--text-muted)",
+              margin: 0,
+            }}
+          >
+            © 2026 Knoodlepot Studios · UK Sole Trader
+          </p>
+        </div>
+      </footer>
+
     </div>
   );
 }
