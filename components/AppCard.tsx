@@ -117,9 +117,50 @@ export default function AppCard({ app }: AppCardProps) {
         )}
       </div>
 
+      {/* Google Play badge + AlternativeTo */}
+      {app.playStoreUrl && (
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", marginTop: "0.5rem" }}>
+          <a
+            href={app.playStoreUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: "inline-block" }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              alt={`Get ${app.name} on Google Play`}
+              src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+              width={160}
+              height={62}
+              style={{ display: "block", marginLeft: "-8px" }}
+            />
+          </a>
+
+          {app.alternativeToUrl && (
+            <a
+              href={app.alternativeToUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontSize: "0.7rem",
+                color: "var(--text-muted)",
+                textDecoration: "none",
+                fontFamily: "var(--font-cinzel)",
+                letterSpacing: "0.05em",
+                borderBottom: "1px solid var(--border)",
+                paddingBottom: "1px",
+                alignSelf: "flex-start",
+              }}
+            >
+              View on AlternativeTo →
+            </a>
+          )}
+        </div>
+      )}
+
       {/* Product Hunt badge */}
       {app.productHuntPostId && app.productHuntSlug && (
-        <div style={{ marginTop: "0.75rem" }}>
+        <div style={{ marginTop: "0.25rem" }}>
           <a
             href={`https://www.producthunt.com/products/${app.productHuntSlug}?utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-${app.productHuntSlug}`}
             target="_blank"

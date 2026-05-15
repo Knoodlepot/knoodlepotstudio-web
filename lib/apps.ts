@@ -10,6 +10,8 @@ export interface App {
   platform: string;
   productHuntPostId?: string;
   productHuntSlug?: string;
+  playStoreUrl?: string;
+  alternativeToUrl?: string;
 }
 
 export const apps: App[] = [
@@ -18,8 +20,10 @@ export const apps: App[] = [
     tagline: "The language of flowers",
     description:
       "Photograph a flower and discover its Victorian meaning. AI-powered identification with poetic stories and a personal garden journal.",
-    status: "in-development",
+    status: "live",
     platform: "Android",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.knoodlepotstudio.floriography",
+    alternativeToUrl: "https://alternativeto.net/software/floriography/about/",
   },
   {
     name: "Greenman",
@@ -28,6 +32,8 @@ export const apps: App[] = [
       "A hiking trail reference app with location mapping and route information for walkers and explorers.",
     status: "live",
     platform: "Android",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.greenman.app",
+    alternativeToUrl: "https://alternativeto.net/software/greenman/about/",
     productHuntPostId: "1147540",
     productHuntSlug: "greenman",
   },
@@ -44,7 +50,7 @@ export const apps: App[] = [
     tagline: "Truth, examined",
     description:
       "Submit any claim and receive a clear AI-powered verdict. Fact-checking made simple and accessible.",
-    status: "live",
+    status: "coming-soon",
     platform: "Android",
   },
   {
@@ -52,7 +58,7 @@ export const apps: App[] = [
     tagline: "Clarity from complexity",
     description:
       "Paste any dense, jargon-filled text and get it translated into plain, readable English — instantly.",
-    status: "live",
+    status: "in-development",
     platform: "Android",
   },
   {
@@ -68,7 +74,7 @@ export const apps: App[] = [
     tagline: "Nature's hidden knowledge",
     description:
       "Explore the folklore, mythology, and natural history woven into the plants, creatures, and landscapes around you.",
-    status: "coming-soon",
+    status: "in-development",
     platform: "Android",
   },
 ];
