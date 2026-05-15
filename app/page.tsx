@@ -15,6 +15,17 @@ function GoldRule() {
   );
 }
 
+/* Instagram SVG icon */
+function InstagramIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
 export default function Home() {
   return (
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
@@ -78,6 +89,15 @@ export default function Home() {
             >
               About
             </a>
+            <a
+              href="https://www.instagram.com/knoodlepot_studio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              style={{ color: "var(--text-muted)", display: "flex", alignItems: "center" }}
+            >
+              <InstagramIcon />
+            </a>
             <ThemeToggle />
           </div>
         </div>
@@ -94,7 +114,6 @@ export default function Home() {
           gap: "1.5rem",
         }}
       >
-        {/* Overline */}
         <p
           style={{
             fontFamily: "var(--font-cinzel)",
@@ -108,7 +127,6 @@ export default function Home() {
           Independent Studio
         </p>
 
-        {/* Main heading */}
         <h1
           style={{
             fontFamily: "var(--font-cinzel)",
@@ -124,7 +142,6 @@ export default function Home() {
           Knoodlepot Studios
         </h1>
 
-        {/* Tagline */}
         <p
           style={{
             fontFamily: "var(--font-playfair)",
@@ -141,7 +158,6 @@ export default function Home() {
 
         <GoldRule />
 
-        {/* CTA */}
         <a
           href="#apps"
           style={{
@@ -209,6 +225,72 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Beta Testers ── */}
+      <section
+        style={{
+          padding: "3rem 1.5rem",
+          maxWidth: "720px",
+          margin: "0 auto",
+          width: "100%",
+          textAlign: "center",
+        }}
+      >
+        <a
+          href="https://betatribe.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none" }}
+        >
+          <div
+            style={{
+              border: "1px solid var(--border)",
+              borderRadius: "8px",
+              padding: "1.75rem 2rem",
+              background: "var(--surface)",
+              display: "flex",
+              flexDirection: "column",
+              gap: "0.6rem",
+              alignItems: "center",
+              transition: "border-color 0.2s",
+            }}
+          >
+            <p
+              style={{
+                fontFamily: "var(--font-cinzel)",
+                fontSize: "0.65rem",
+                letterSpacing: "0.2em",
+                textTransform: "uppercase",
+                color: "var(--gold)",
+                margin: 0,
+              }}
+            >
+              Beta Testers
+            </p>
+            <p
+              style={{
+                fontFamily: "var(--font-playfair)",
+                fontSize: "1.05rem",
+                color: "var(--text)",
+                margin: 0,
+              }}
+            >
+              Help shape our apps before they launch
+            </p>
+            <p
+              style={{
+                fontFamily: "var(--font-playfair)",
+                fontStyle: "italic",
+                fontSize: "0.875rem",
+                color: "var(--text-muted)",
+                margin: 0,
+              }}
+            >
+              Join our community of testers on BetaTribe →
+            </p>
+          </div>
+        </a>
+      </section>
+
       {/* ── About ── */}
       <section
         id="about"
@@ -216,7 +298,7 @@ export default function Home() {
           padding: "5rem 1.5rem",
           borderTop: "1px solid var(--border)",
           maxWidth: "720px",
-          margin: "2rem auto 0",
+          margin: "0 auto",
           width: "100%",
           textAlign: "center",
         }}
@@ -275,10 +357,45 @@ export default function Home() {
             margin: "0 auto",
             display: "flex",
             flexDirection: "column",
-            gap: "0.5rem",
+            gap: "0.75rem",
             alignItems: "center",
           }}
         >
+          {/* Social links */}
+          <div style={{ display: "flex", gap: "1.5rem", alignItems: "center" }}>
+            <a
+              href="https://www.instagram.com/knoodlepot_studio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontFamily: "var(--font-cinzel)",
+                fontSize: "0.7rem",
+                letterSpacing: "0.08em",
+                color: "var(--text-muted)",
+                textDecoration: "none",
+                display: "flex",
+                alignItems: "center",
+                gap: "0.4rem",
+              }}
+            >
+              <InstagramIcon /> Instagram
+            </a>
+            <a
+              href="https://betatribe.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontFamily: "var(--font-cinzel)",
+                fontSize: "0.7rem",
+                letterSpacing: "0.08em",
+                color: "var(--text-muted)",
+                textDecoration: "none",
+              }}
+            >
+              BetaTribe
+            </a>
+          </div>
+
           <a
             href="mailto:knoodlepot@knoodlepotstudio.com"
             style={{
