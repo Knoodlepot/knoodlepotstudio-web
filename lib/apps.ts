@@ -17,7 +17,7 @@ export const apps: App[] = [
     description:
       "Photograph a flower and discover its Victorian meaning. AI-powered identification with poetic stories and a personal garden journal.",
     status: "in-development",
-    platform: "Android & iOS",
+    platform: "Android",
   },
   {
     name: "Greenman",
@@ -57,7 +57,7 @@ export const apps: App[] = [
     description:
       "A moon phase and celestial lore app steeped in mythology and the rhythms of the natural world.",
     status: "coming-soon",
-    platform: "Android & iOS",
+    platform: "Android",
   },
   {
     name: "Naturlore",
@@ -65,15 +65,7 @@ export const apps: App[] = [
     description:
       "Explore the folklore, mythology, and natural history woven into the plants, creatures, and landscapes around you.",
     status: "coming-soon",
-    platform: "Android & iOS",
-  },
-  {
-    name: "StitchSnap",
-    tagline: "Cross-stitch, reimagined",
-    description:
-      "Turn any photograph into a printable cross-stitch pattern, entirely on your device — no account needed.",
-    status: "coming-soon",
-    platform: "Android & iOS",
+    platform: "Android",
   },
 ];
 
