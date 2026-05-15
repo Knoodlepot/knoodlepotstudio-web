@@ -8,6 +8,8 @@ export interface App {
   link?: string;
   linkLabel?: string;
   platform: string;
+  productHuntPostId?: string;
+  productHuntSlug?: string;
 }
 
 export const apps: App[] = [
@@ -26,6 +28,8 @@ export const apps: App[] = [
       "A hiking trail reference app with location mapping and route information for walkers and explorers.",
     status: "live",
     platform: "Android",
+    productHuntPostId: "1147540",
+    productHuntSlug: "greenman",
   },
   {
     name: "Describr",

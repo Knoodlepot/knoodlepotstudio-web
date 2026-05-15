@@ -116,6 +116,26 @@ export default function AppCard({ app }: AppCardProps) {
           </a>
         )}
       </div>
+
+      {/* Product Hunt badge */}
+      {app.productHuntPostId && app.productHuntSlug && (
+        <div style={{ marginTop: "0.75rem" }}>
+          <a
+            href={`https://www.producthunt.com/products/${app.productHuntSlug}?utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-${app.productHuntSlug}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              alt={`${app.name} | Product Hunt`}
+              src={`https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=${app.productHuntPostId}&theme=dark`}
+              width={200}
+              height={43}
+              style={{ display: "block" }}
+            />
+          </a>
+        </div>
+      )}
     </div>
   );
 }
