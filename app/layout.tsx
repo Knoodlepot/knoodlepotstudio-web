@@ -22,15 +22,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Knoodlepot Studios",
+  title: "Knoodlepot Studio",
   description:
-    "Apps steeped in myth, lore, and Victorian wonder. Independent mobile and web apps by Knoodlepot Studios.",
+    "Apps steeped in myth, lore, and Victorian wonder. Independent mobile and web apps by Knoodlepot Studio.",
   openGraph: {
-    title: "Knoodlepot Studios",
+    title: "Knoodlepot Studio",
     description:
       "Apps steeped in myth, lore, and Victorian wonder.",
     url: "https://knoodlepotstudio.com",
-    siteName: "Knoodlepot Studios",
+    siteName: "Knoodlepot Studio",
     type: "website",
   },
 };

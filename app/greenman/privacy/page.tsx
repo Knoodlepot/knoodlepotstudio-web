@@ -6,14 +6,14 @@ export default function GreenmanPrivacy() {
   return (
     <PrivacyPage appName="Greenman" lastUpdated="18 April 2026">
       <Section title="1. Who We Are">
-        <p>Greenman is developed and operated by Knoodlepot Studios, a sole trader based in the United Kingdom. Contact: <a href="mailto:knoodlepot@knoodlepotstudio.com" style={styles.link}>knoodlepot@knoodlepotstudio.com</a></p>
+        <p>Greenman is developed and operated by Knoodlepot Studio, a sole trader based in the United Kingdom. Contact: <a href="mailto:knoodlepot@knoodlepotstudio.com" style={styles.link}>knoodlepot@knoodlepotstudio.com</a></p>
       </Section>
 
       <Section title="2. What Data We Collect">
         <p>Greenman is a reference app. It does not require an account and does not collect personal information. The only data stored is:</p>
         <ul style={styles.list}>
           <li><strong>Local app preferences</strong> — your disclaimer acceptance and any settings are saved locally on your device using AsyncStorage. This data never leaves your device.</li>
-          <li><strong>Subscription status</strong> — if you make a purchase, RevenueCat records an anonymous device identifier and your purchase receipt to manage and restore your entitlements. No name, email address, or other personal information is collected by Knoodlepot Studios in connection with purchases.</li>
+          <li><strong>Subscription status</strong> — if you make a purchase, RevenueCat records an anonymous device identifier and your purchase receipt to manage and restore your entitlements. No name, email address, or other personal information is collected by Knoodlepot Studio in connection with purchases.</li>
         </ul>
         <p>We do not collect your name, email address, location, or any other personal information.</p>
       </Section>
@@ -36,11 +36,11 @@ export default function GreenmanPrivacy() {
       </Section>
 
       <Section title="5. Data Retention">
-        <p>Local preferences are stored on your device and can be cleared by uninstalling the app. Purchase records are held by RevenueCat and Google Play in accordance with their respective policies. Knoodlepot Studios does not hold any personal data on its own servers.</p>
+        <p>Local preferences are stored on your device and can be cleared by uninstalling the app. Purchase records are held by RevenueCat and Google Play in accordance with their respective policies. Knoodlepot Studio does not hold any personal data on its own servers.</p>
       </Section>
 
       <Section title="6. Your Rights (UK GDPR)">
-        <p>Because Greenman collects no personal information beyond anonymous purchase identifiers managed by third parties, there is limited personal data for Knoodlepot Studios to action. However, as a UK resident you have the right to:</p>
+        <p>Because Greenman collects no personal information beyond anonymous purchase identifiers managed by third parties, there is limited personal data for Knoodlepot Studio to action. However, as a UK resident you have the right to:</p>
         <ul style={styles.list}>
           <li>Access any personal data we hold about you.</li>
           <li>Request correction of inaccurate data.</li>

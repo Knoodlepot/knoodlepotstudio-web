@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props) {
   const app = apps.find((a) => a.slug === slug);
   if (!app) return {};
   return {
-    title: `${app.name} — Knoodlepot Studios`,
+    title: `${app.name} — Knoodlepot Studio`,
     description: app.description,
   };
 }

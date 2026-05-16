@@ -33,10 +33,10 @@ export function PrivacyPage({
 }) {
   return (
     <main style={styles.page}>
-      <a href="/" style={styles.back}>← Knoodlepot Studios</a>
+      <a href="/" style={styles.back}>← Knoodlepot Studio</a>
       <div style={styles.container}>
         <h1 style={styles.title}>Privacy Policy</h1>
-        <p style={styles.subtitle}>{appName} — Knoodlepot Studios</p>
+        <p style={styles.subtitle}>{appName} — Knoodlepot Studio</p>
         <p style={styles.updated}>Last updated: {lastUpdated}</p>
         {children}
       </div>

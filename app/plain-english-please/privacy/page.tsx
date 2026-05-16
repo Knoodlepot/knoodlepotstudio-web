@@ -6,7 +6,7 @@ export default function PlainEnglishPrivacy() {
   return (
     <PrivacyPage appName="Plain English, Please" lastUpdated="16 May 2026">
       <Section title="1. Who We Are">
-        <p>Plain English, Please is developed and operated by Knoodlepot Studios, a sole trader based in the United Kingdom. Contact: <a href="mailto:knoodlepot@knoodlepotstudio.com" style={styles.link}>knoodlepot@knoodlepotstudio.com</a></p>
+        <p>Plain English, Please is developed and operated by Knoodlepot Studio, a sole trader based in the United Kingdom. Contact: <a href="mailto:knoodlepot@knoodlepotstudio.com" style={styles.link}>knoodlepot@knoodlepotstudio.com</a></p>
       </Section>
 
       <Section title="2. What Data We Collect">

@@ -61,7 +61,7 @@ export default function Home() {
               textTransform: "uppercase",
             }}
           >
-            Knoodlepot Studios
+            Knoodlepot Studio
           </span>
 
           <div style={{ display: "flex", alignItems: "center", gap: "1.25rem" }}>
@@ -139,7 +139,7 @@ export default function Home() {
             maxWidth: "720px",
           }}
         >
-          Knoodlepot Studios
+          Knoodlepot Studio
         </h1>
 
         <p
@@ -371,7 +371,7 @@ export default function Home() {
             marginBottom: "1.25rem",
           }}
         >
-          Knoodlepot Studios is an independent one-person studio based in the United Kingdom,
+          Knoodlepot Studio is an independent one-person studio based in the United Kingdom,
           building mobile and web apps with a love of Victorian aesthetics, mythology, folklore,
           and the natural world.
         </p>
@@ -464,7 +464,7 @@ export default function Home() {
               margin: 0,
             }}
           >
-            © 2026 Knoodlepot Studios · UK Sole Trader
+            © 2026 Knoodlepot Studio · UK Sole Trader
           </p>
         </div>
       </footer>
