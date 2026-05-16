@@ -184,6 +184,29 @@ export default function AppCard({ app }: AppCardProps) {
           </a>
         </div>
       )}
+      {/* More information prompt */}
+      <div
+        style={{
+          marginTop: "0.75rem",
+          paddingTop: "0.75rem",
+          borderTop: "1px solid var(--border)",
+          display: "flex",
+          justifyContent: "flex-end",
+        }}
+      >
+        <span
+          style={{
+            fontFamily: "var(--font-cinzel)",
+            fontSize: "0.65rem",
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            color: "var(--gold)",
+          }}
+        >
+          More Information →
+        </span>
+      </div>
+
     </div>
     </Link>
   );
