@@ -15,6 +15,7 @@ export interface App {
   productHuntSlug?: string;
   playStoreUrl?: string;
   alternativeToUrl?: string;
+  privacyPath?: string;
 }
 
 export interface Section {
@@ -50,6 +51,7 @@ export const apps: App[] = [
     platform: "Android",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.knoodlepotstudio.floriography",
     alternativeToUrl: "https://alternativeto.net/software/floriography/about/",
+    privacyPath: "/floriography/privacy",
   },
   {
     name: "Naturlore",
@@ -76,6 +78,7 @@ export const apps: App[] = [
     alternativeToUrl: "https://alternativeto.net/software/greenman/about/",
     productHuntPostId: "1147540",
     productHuntSlug: "greenman",
+    privacyPath: "/greenman/privacy",
   },
   {
     name: "Lunarium",
@@ -108,6 +111,7 @@ export const apps: App[] = [
     status: "in-development",
     category: "utility",
     platform: "Android",
+    privacyPath: "/describr/privacy",
   },
   {
     name: "Veracitor",
@@ -118,6 +122,7 @@ export const apps: App[] = [
     status: "coming-soon",
     category: "utility",
     platform: "Android",
+    privacyPath: "/veracitor/privacy",
   },
   {
     name: "Togetherly",
@@ -140,6 +145,7 @@ export const apps: App[] = [
     status: "in-development",
     category: "fun",
     platform: "Android",
+    privacyPath: "/plain-english-please/privacy",
   },
 ];
 

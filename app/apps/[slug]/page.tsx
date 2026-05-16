@@ -88,6 +88,27 @@ export default async function AppPage({ params }: Props) {
           </p>
         )}
 
+        {/* Privacy policy link */}
+        {app.privacyPath && (
+          <div style={{ marginTop: "2rem" }}>
+            <Link
+              href={app.privacyPath}
+              style={{
+                fontFamily: "var(--font-cinzel)",
+                fontSize: "0.65rem",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase" as const,
+                color: "var(--text-muted)",
+                textDecoration: "none",
+                borderBottom: "1px solid var(--border)",
+                paddingBottom: "1px",
+              }}
+            >
+              Privacy Policy
+            </Link>
+          </div>
+        )}
+
         {/* Links */}
         {(app.playStoreUrl || app.alternativeToUrl || app.productHuntPostId) && (
           <>
