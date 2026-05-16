@@ -239,6 +239,33 @@ export const appDetails: AppDetail[] = [
     ],
   },
   {
+    slug: "plain-english-please",
+    intro: [
+      "Plain English, Please is a British humour app for anyone who has ever received an email that said \"as per my last message\" and needed a moment alone. It translates the passive-aggressive, the corporate, and the diplomatically catastrophic into what was actually meant — and what you're actually thinking.",
+      "The name is a phrase. It is what you want to say but cannot. The app says it for you.",
+    ],
+    sections: [
+      {
+        title: "What makes it different",
+        paragraphs: [
+          "Most people know what they heard. What they don't know is what to do with it. Plain English, Please passes the remark through Claude AI, which reads the context — workplace politics, family tension, a stranger being inexplicably awful — and returns three things: a brutally honest translation of what was actually meant, a polished response that will not get you fired or uninvited, and the internal monologue you are legally prohibited from saying aloud. A Twat-O-Meter rates the offender on a scale of one to five teacups.",
+        ],
+      },
+      {
+        title: "How it works",
+        paragraphs: [
+          "Select the context. Type or speak what was said. Press the button. The result arrives in seconds — dry, specific, and satisfying. Translations can be saved to history or shared as an image.",
+        ],
+      },
+      {
+        title: "The feel",
+        paragraphs: [
+          "Warm cream, bottle green, aged gold. Playfair Display for headings, Special Elite for body text. The aesthetic is a Victorian consulting room staffed entirely by people who have had enough. Precise, unhurried, and quietly furious.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "togetherly",
     intro: [
       "Togetherly is a quiet check-in app for families who worry — built for elderly or disabled people who live alone, and the relatives who think about them throughout the day. It is not a tracker, a monitoring system, or a panic button. It is a gentle, daily signal that says I'm here.",
