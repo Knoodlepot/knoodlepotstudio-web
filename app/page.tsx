@@ -1,6 +1,6 @@
 import ThemeToggle from "@/components/ThemeToggle";
 import AppCard from "@/components/AppCard";
-import { apps } from "@/lib/apps";
+import { apps, sections, statusOrder } from "@/lib/apps";
 
 /* Decorative SVG flourish */
 function GoldRule() {
@@ -177,17 +177,20 @@ export default function Home() {
         </a>
       </section>
 
-      {/* ── Apps Grid ── */}
-      <section
+      {/* ── Apps by Section ── */}
+      <div
         id="apps"
         style={{
           padding: "4rem 1.5rem",
           maxWidth: "1100px",
           margin: "0 auto",
           width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          gap: "4rem",
         }}
       >
-        <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+        <div style={{ textAlign: "center" }}>
           <h2
             style={{
               fontFamily: "var(--font-cinzel)",
@@ -212,18 +215,62 @@ export default function Home() {
           </p>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-            gap: "1.25rem",
-          }}
-        >
-          {apps.map((app) => (
-            <AppCard key={app.name} app={app} />
-          ))}
-        </div>
-      </section>
+        {sections.map((section) => {
+          const sectionApps = apps
+            .filter((a) => a.category === section.id)
+            .sort((a, b) => statusOrder[a.status] - statusOrder[b.status]);
+
+          return (
+            <div key={section.id}>
+              {/* Section header */}
+              <div style={{ marginBottom: "1.75rem" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "0.4rem" }}>
+                  <div style={{ flex: 1, height: "1px", background: "var(--border)" }} />
+                  <h3
+                    style={{
+                      fontFamily: "var(--font-cinzel)",
+                      fontSize: "0.8rem",
+                      letterSpacing: "0.25em",
+                      textTransform: "uppercase",
+                      color: "var(--gold)",
+                      margin: 0,
+                      flexShrink: 0,
+                    }}
+                  >
+                    {section.label}
+                  </h3>
+                  <div style={{ flex: 1, height: "1px", background: "var(--border)" }} />
+                </div>
+                <p
+                  style={{
+                    fontFamily: "var(--font-playfair)",
+                    fontStyle: "italic",
+                    fontSize: "0.8rem",
+                    color: "var(--text-muted)",
+                    textAlign: "center",
+                    margin: 0,
+                  }}
+                >
+                  {section.tagline}
+                </p>
+              </div>
+
+              {/* Section grid */}
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+                  gap: "1.25rem",
+                }}
+              >
+                {sectionApps.map((app) => (
+                  <AppCard key={app.name} app={app} />
+                ))}
+              </div>
+            </div>
+          );
+        })}
+      </div>
 
       {/* ── Beta Testers ── */}
       <section
