@@ -3,6 +3,7 @@ export type AppCategory = "nature" | "lore" | "utility" | "fun";
 
 export interface App {
   name: string;
+  slug: string;
   tagline: string;
   description: string;
   status: AppStatus;
@@ -40,6 +41,7 @@ export const apps: App[] = [
   /* ── Nature ── */
   {
     name: "Floriography",
+    slug: "floriography",
     tagline: "The language of flowers",
     description:
       "Photograph a flower and discover its Victorian meaning. AI-powered identification with poetic stories and a personal garden journal.",
@@ -51,6 +53,7 @@ export const apps: App[] = [
   },
   {
     name: "Naturlore",
+    slug: "naturlore",
     tagline: "Nature's hidden knowledge",
     description:
       "Explore the folklore, mythology, and natural history woven into the plants, creatures, and landscapes around you.",
@@ -62,6 +65,7 @@ export const apps: App[] = [
   /* ── Lore ── */
   {
     name: "Greenman",
+    slug: "greenman",
     tagline: "Trails & wilderness, mapped",
     description:
       "A hiking trail reference app with location mapping and route information for walkers and explorers.",
@@ -75,6 +79,7 @@ export const apps: App[] = [
   },
   {
     name: "Lunarium",
+    slug: "lunarium",
     tagline: "Moon, myth & sky",
     description:
       "A moon phase and celestial lore app steeped in mythology and the rhythms of the natural world.",
@@ -86,6 +91,7 @@ export const apps: App[] = [
   /* ── Utility ── */
   {
     name: "Lunettes",
+    slug: "lunettes",
     tagline: "Every book, given a voice",
     description:
       "A premium AI reading app for dyslexia, visual impairment, and ADHD — built to feel like a luxury product. Claude reads emotional context; ElevenLabs delivers it with matching pitch, pace, and tone. A chase scene sounds like a chase scene.",
@@ -95,6 +101,7 @@ export const apps: App[] = [
   },
   {
     name: "Describr",
+    slug: "describr",
     tagline: "See the world described",
     description:
       "An Android app that uses AI to generate rich descriptions of the world around you.",
@@ -104,6 +111,7 @@ export const apps: App[] = [
   },
   {
     name: "Veracitor",
+    slug: "veracitor",
     tagline: "Truth, examined",
     description:
       "Submit any claim and receive a clear AI-powered verdict. Fact-checking made simple and accessible.",
@@ -113,6 +121,7 @@ export const apps: App[] = [
   },
   {
     name: "Togetherly",
+    slug: "togetherly",
     tagline: "Stay connected, stay coordinated",
     description:
       "A shared planning app for families and groups. Coordinate schedules, share updates, and stay in sync — wherever you are.",
@@ -124,6 +133,7 @@ export const apps: App[] = [
   /* ── Fun ── */
   {
     name: "Plain English, Please.",
+    slug: "plain-english-please",
     tagline: "Clarity from complexity",
     description:
       "Paste any dense, jargon-filled text and get it translated into plain, readable English — instantly.",

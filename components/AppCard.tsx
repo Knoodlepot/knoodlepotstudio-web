@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { App, statusLabel, statusColour } from "@/lib/apps";
 
 interface AppCardProps {
@@ -6,6 +7,10 @@ interface AppCardProps {
 
 export default function AppCard({ app }: AppCardProps) {
   return (
+    <Link
+      href={`/apps/${app.slug}`}
+      style={{ textDecoration: "none", display: "block" }}
+    >
     <div
       style={{
         background: "var(--surface)",
@@ -15,7 +20,9 @@ export default function AppCard({ app }: AppCardProps) {
         display: "flex",
         flexDirection: "column",
         gap: "0.6rem",
-        transition: "border-color 0.2s",
+        transition: "border-color 0.2s, background 0.2s",
+        cursor: "pointer",
+        height: "100%",
       }}
       className="app-card"
     >
@@ -178,5 +185,6 @@ export default function AppCard({ app }: AppCardProps) {
         </div>
       )}
     </div>
+    </Link>
   );
 }
