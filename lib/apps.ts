@@ -62,6 +62,7 @@ export const apps: App[] = [
     status: "in-development",
     category: "nature",
     platform: "Android",
+    privacyPath: "/naturlore/privacy",
   },
 
   /* ── Lore ── */
@@ -89,6 +90,7 @@ export const apps: App[] = [
     status: "coming-soon",
     category: "lore",
     platform: "Android",
+    privacyPath: "/lunarium/privacy",
   },
 
   /* ── Utility ── */
@@ -101,6 +103,7 @@ export const apps: App[] = [
     status: "in-development",
     category: "utility",
     platform: "Android",
+    privacyPath: "/lunettes/privacy",
   },
   {
     name: "Describr",
@@ -133,6 +136,7 @@ export const apps: App[] = [
     status: "coming-soon",
     category: "utility",
     platform: "Android",
+    privacyPath: "/togetherly/privacy",
   },
 
   /* ── Fun ── */
