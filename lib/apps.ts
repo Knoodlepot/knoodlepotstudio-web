@@ -16,6 +16,7 @@ export interface App {
   playStoreUrl?: string;
   alternativeToUrl?: string;
   privacyPath?: string;
+  termsPath?: string;
 }
 
 export interface Section {
@@ -52,6 +53,7 @@ export const apps: App[] = [
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.knoodlepotstudio.floriography",
     alternativeToUrl: "https://alternativeto.net/software/floriography/about/",
     privacyPath: "/floriography/privacy",
+    termsPath: "/floriography/terms",
   },
   {
     name: "Naturlore",
@@ -63,6 +65,7 @@ export const apps: App[] = [
     category: "nature",
     platform: "Android",
     privacyPath: "/naturlore/privacy",
+    termsPath: "/naturlore/terms",
   },
 
   /* ── Lore ── */
@@ -80,6 +83,7 @@ export const apps: App[] = [
     productHuntPostId: "1147540",
     productHuntSlug: "greenman",
     privacyPath: "/greenman/privacy",
+    termsPath: "/greenman/terms",
   },
   {
     name: "Lunarium",
@@ -91,6 +95,7 @@ export const apps: App[] = [
     category: "lore",
     platform: "Android",
     privacyPath: "/lunarium/privacy",
+    termsPath: "/lunarium/terms",
   },
 
   /* ── Utility ── */
@@ -104,6 +109,7 @@ export const apps: App[] = [
     category: "utility",
     platform: "Android",
     privacyPath: "/lunettes/privacy",
+    termsPath: "/lunettes/terms",
   },
   {
     name: "Describr",
@@ -115,6 +121,7 @@ export const apps: App[] = [
     category: "utility",
     platform: "Android",
     privacyPath: "/describr/privacy",
+    termsPath: "/describr/terms",
   },
   {
     name: "Veracitor",
@@ -126,6 +133,7 @@ export const apps: App[] = [
     category: "utility",
     platform: "Android",
     privacyPath: "/veracitor/privacy",
+    termsPath: "/veracitor/terms",
   },
   {
     name: "Togetherly",
@@ -137,6 +145,7 @@ export const apps: App[] = [
     category: "utility",
     platform: "Android",
     privacyPath: "/togetherly/privacy",
+    termsPath: "/togetherly/terms",
   },
 
   /* ── Fun ── */
@@ -150,6 +159,7 @@ export const apps: App[] = [
     category: "fun",
     platform: "Android",
     privacyPath: "/plain-english-please/privacy",
+    termsPath: "/plain-english-please/terms",
   },
 ];
 

@@ -88,24 +88,43 @@ export default async function AppPage({ params }: Props) {
           </p>
         )}
 
-        {/* Privacy policy link */}
-        {app.privacyPath && (
-          <div style={{ marginTop: "2rem" }}>
-            <Link
-              href={app.privacyPath}
-              style={{
-                fontFamily: "var(--font-cinzel)",
-                fontSize: "0.65rem",
-                letterSpacing: "0.1em",
-                textTransform: "uppercase" as const,
-                color: "var(--text-muted)",
-                textDecoration: "none",
-                borderBottom: "1px solid var(--border)",
-                paddingBottom: "1px",
-              }}
-            >
-              Privacy Policy
-            </Link>
+        {/* Legal links */}
+        {(app.privacyPath || app.termsPath) && (
+          <div style={{ marginTop: "2rem", display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
+            {app.privacyPath && (
+              <Link
+                href={app.privacyPath}
+                style={{
+                  fontFamily: "var(--font-cinzel)",
+                  fontSize: "0.65rem",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase" as const,
+                  color: "var(--text-muted)",
+                  textDecoration: "none",
+                  borderBottom: "1px solid var(--border)",
+                  paddingBottom: "1px",
+                }}
+              >
+                Privacy Policy
+              </Link>
+            )}
+            {app.termsPath && (
+              <Link
+                href={app.termsPath}
+                style={{
+                  fontFamily: "var(--font-cinzel)",
+                  fontSize: "0.65rem",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase" as const,
+                  color: "var(--text-muted)",
+                  textDecoration: "none",
+                  borderBottom: "1px solid var(--border)",
+                  paddingBottom: "1px",
+                }}
+              >
+                Terms of Service
+              </Link>
+            )}
           </div>
         )}
 
