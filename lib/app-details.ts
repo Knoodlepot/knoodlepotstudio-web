@@ -50,64 +50,61 @@ export const appDetails: AppDetail[] = [
       {
         title: "What makes it different",
         paragraphs: [
-          "Most text-to-speech apps read words. Lunettes reads meaning. Every page is first analysed by Claude AI, which identifies the emotional register of the text — tension, grief, tenderness, urgency — and passes that context to ElevenLabs, which generates speech to match. A chase scene sounds like a chase scene. A letter of farewell is read as one.",
-          "This is not a feature. It is the entire premise of the app.",
+          "Most text-to-speech apps just read words aloud in a flat, robotic voice. Lunettes passes the text through Claude AI first, which detects the emotional context of what's being read — tension, grief, romance, humour, panic — and generates delivery instructions. ElevenLabs then narrates with matching pitch, pace, and tone. A chase scene sounds like a chase scene. A quiet moment sounds quiet. No other TTS app does this.",
         ],
       },
       {
         title: "How it works",
         paragraphs: [
-          "Overlay mode works across any app on your phone — your Kindle, your browser, your email. Tap the Lunettes overlay, and whatever is on screen is read aloud with full emotional intelligence.",
-          "Import mode lets you bring in your own documents, EPUBs, or PDFs. The app processes the full text, applies emotional analysis chapter by chapter, and reads the whole book from start to finish without interruption.",
+          "Overlay mode sits invisibly on top of Kindle or any ebook app. The user presses Play, the screen dims to near-black (appearing off, but keeping the reading service running), and the app reads whatever is on screen — turning pages automatically, completely hands-free. No DRM is touched; it reads only what's already displayed, which is fully legal under the Marrakesh Treaty 2018.",
+          "Import mode lets users bring their own DRM-free EPUBs or PDFs — Project Gutenberg titles, sideloaded books — directly into the app.",
         ],
       },
       {
         title: "For people who need more support",
         paragraphs: [
-          "Lunettes includes a dyslexia-friendly font mode, adjustable reading speed, highlighted word tracking, and a sleep timer. Everything is adjustable. Nothing is buried.",
+          "A Family Helper account lets a carer, parent, or friend remotely set up the next book and adjust voice settings from anywhere, with the reader's explicit real-time consent before anything changes. Real-time translation into any language is also built in — useful for non-native speakers and the Japanese manga community.",
         ],
       },
       {
         title: "The feel",
         paragraphs: [
-          "Deep navy, warm cream, and soft gold. The interface is calm, uncluttered, and designed to feel like an expensive object. Because the people who need this app deserve something that treats them that way.",
+          "Dark navy, warm cream, soft gold. Cormorant Garamond for headings and reading text, DM Sans for controls. Literary, calm, and confident. The hand can find the play button in the dark. It never feels like a medical device.",
         ],
       },
     ],
-    pricing:
-      "Free — 3 chapters per month with standard voice. Lunettes Premium £4.99/month — unlimited reading, emotional voice synthesis, overlay mode, import mode, and all voice profiles.",
   },
   {
     slug: "greenman",
     intro: [
-      "Greenman is an Android hiking and trail reference app — a companion for walkers, explorers, and anyone who wants to understand the land beneath their feet. It combines location-aware trail mapping with route information, difficulty ratings, and curated notes on the natural and historical character of each path.",
-      "The name is taken from the ancient figure of the Green Man — the leafy face carved into the stonework of medieval churches across Britain and Europe. Half wild, half sacred. A presence in the wood that knows every path.",
+      "Greenman is a British folk craft reference app — a grimoire for the tradition as it was actually practised in these islands, not the generic Wicca exported everywhere else. It is built for people who take the craft seriously: a working reference, not a novelty.",
+      "The name comes from the carved foliate faces found in medieval English churches — a figure neither fully human nor fully wild, watching from the margins of the sacred. That tension between the old world and the present one is what the app lives in.",
     ],
     sections: [
       {
         title: "What makes it different",
         paragraphs: [
-          "Most trail apps are databases. Greenman is a field companion. Routes are presented not just as lines on a map but with written character — the kind of path it is, what you will find there, what the land was once used for. Walking a route with Greenman feels like walking with someone who knows the area well.",
+          "Most witchcraft apps are spell generators or mood boards. Greenman is a library. The herb section covers 130 plants with folk names, magical properties, historical uses in British craft, and cautions. The crystal library runs to 150 entries. The spells section holds over 300 workings drawn from documented tradition. There is a written history of British witchcraft from the Neolithic to the present day — nine eras, no hagiography. None of this is invented. If the tradition does not record it, the app does not include it.",
         ],
       },
       {
         title: "How it works",
         paragraphs: [
-          "Open the app and your location is shown against a curated map of nearby trails. Tap a route for full details — length, elevation, difficulty, surface type, and a written description. Save routes to your collection for offline access. Track your walk in real time with the live map view.",
+          "The Grimoire is the reference library — herbs, crystals, spells, folk beliefs, omens, symbolism, witch marks, historic witches, and artefacts. The Wheel covers the sabbats, moon phases, and the Triple Goddess. The Trail gives GPS coordinates and directions to ten real sacred sites across Britain, from Pendle to Avebury. The Cunning adds AI guidance grounded strictly in the sources within the app — it will not invent folklore, and it redirects non-British queries to British equivalents.",
         ],
       },
       {
         title: "Pricing",
         paragraphs: [
-          "Free — access to all trail listings, basic map view, and route details.",
-          "Greenman Trail Pass £2.99/month — offline maps, live GPS tracking, route saving, and elevation profiles.",
-          "Lifetime pass available at £14.99.",
+          "Free access is genuinely useful — 10 spells per category, 20 herbs, 30 crystals, all eight sabbats, the full history, all ten trail locations, and the Beginner's Path. No upsell banners. Free users are not second class.",
+          "Hedgewalker (£4.99 one-off) unlocks the full library — all 300+ spells, the complete herb and crystal entries, full sabbat rituals, moon workings, rites of passage, and solitary practice framework. One payment, permanent access.",
+          "The Cunning (£2.00/month, add-on) unlocks the AI features: Ask the Hedgewitch, Plant Recognition, Ritual Builder, Crystal & Spell Matcher, Seasonal Guidance, Triple Goddess Guidance, and the Charging Station.",
         ],
       },
       {
         title: "The feel",
         paragraphs: [
-          "Deep forest green, warm stone, and weathered gold. The typography is legible in direct sunlight. The interface is designed to work with muddy hands and a low battery. It feels like a well-made piece of outdoor kit.",
+          "Deep forest green, aged gold, dark bark. The content is spare and direct — no romantic padding, no invented atmosphere. The tradition has enough of its own.",
         ],
       },
     ],
@@ -115,43 +112,41 @@ export const appDetails: AppDetail[] = [
   {
     slug: "naturlore",
     intro: [
-      "Naturlore is an Android app about the hidden knowledge layered into the natural world — the folklore, mythology, and ancient meaning woven into the plants, creatures, and landscapes that most people walk past without a second thought. Point your camera at what you find, and Naturlore tells you what the world once believed about it.",
+      "Naturlore is a nature folklore app for Android — point your camera at any plant, creature, fungus, or insect, and discover the myths, history, and living lore that surrounds it. Not a field guide. Not a species database. Something older.",
     ],
     sections: [
       {
         title: "The name",
         paragraphs: [
-          "Naturlore is a compound of nature and lore — the old English word for knowledge passed down through story, practice, and lived experience. Not the knowledge of textbooks, but the knowledge of people who lived close to the land for centuries and paid careful attention to what they found there.",
+          "Lore is the body of knowledge passed down through generations — not textbooks, but stories. The things your grandmother knew about elderflowers. What sailors believed about albatrosses. Why oak trees appear in a hundred English place names. Naturlore gathers that living tradition and puts it in your pocket.",
         ],
       },
       {
         title: "What makes it different",
         paragraphs: [
-          "Plant and creature identification apps tell you what something is. Naturlore tells you what it meant. Every identification is passed through Claude AI, which draws on a deep library of folklore, mythology, herbalism, and natural history to generate a full lore entry — the beliefs attached to this plant across different cultures, the stories told about this creature, the uses it was put to, the warnings associated with it.",
-          "The result is not a Wikipedia summary. It reads like a page from an old field guide written by someone who believed the world was full of meaning.",
+          "Most nature apps tell you what something is. Naturlore tells you what it means. When you photograph a common oak, you don't get a Wikipedia summary — you get its mythology, its historical uses, the superstitions attached to it, the misconceptions people have carried for centuries, and a verse of poetry. Then the oak itself speaks to you in a short, vivid message written as if the species has a voice.",
+          "Every entry is written in the style of a regional literary tradition — British entries read like Bill Bryson meets Robert Macfarlane. Japanese entries carry the quiet of Bashō. Arabic entries draw from Al-Jahiz. The same oak, told in French, is an entirely different cultural experience.",
         ],
       },
       {
         title: "How it works",
         paragraphs: [
-          "Photograph anything — a plant, a mushroom, an insect, a bird, a landscape feature. Naturlore identifies it and generates a lore entry. Each entry is saved to your Field Journal, building a personal record of everything you have found and what it once meant to the people who named it.",
+          "Photograph something, or pick from your camera roll. Claude AI identifies the species and generates a full lore entry — true facts, mythology, folklore, historical stories, a poem, and seasonal notes — then caches it permanently. The second person to find the same species anywhere in the world gets it instantly, from the archive. First discoveries are credited by username, permanently.",
         ],
       },
       {
         title: "The Field Journal",
         paragraphs: [
-          "Every entry you collect is stored in a growing personal journal, organised by category and location. Over time it becomes a record of the places you have walked and the knowledge you have gathered — a lore-keeper's compendium, built one photograph at a time.",
+          "Every species you identify is saved to your personal Field Journal, sorted by rarity — Common through to Exceptional. The Browse tab is a growing encyclopedia of everything the community has discovered, organised by category: Flowers, Trees, Fungi, Buggie Boo's. It starts sparse and fills as people explore.",
         ],
       },
       {
         title: "The feel",
         paragraphs: [
-          "Aged parchment, forest green, and deep amber. Hand-drawn botanical illustration style throughout. The app is designed to feel like an artefact — something that belongs in a leather satchel alongside a field notebook and a compass.",
+          "Deep forest green, warm aged cream, burnt amber. Serif headings, mono labels, hand-press sensibility. It should feel like a Victorian naturalist's notebook, not a utility app. The rarity system — with its coloured badges and first-discovery credits — quietly makes wandering outside feel like an adventure.",
         ],
       },
     ],
-    pricing:
-      "Free — 5 lore entries per month. Naturlore Full Access £3.49/month — unlimited identifications, full Field Journal, location tagging, and offline lore library.",
   },
   {
     slug: "lunarium",
@@ -207,8 +202,6 @@ export const appDetails: AppDetail[] = [
         ],
       },
     ],
-    pricing:
-      "Free — 5 fact checks per day. Veracitor Pro £2.99/month — unlimited checks, full history, and priority processing.",
   },
   {
     slug: "describr",
@@ -244,8 +237,6 @@ export const appDetails: AppDetail[] = [
         ],
       },
     ],
-    pricing:
-      "Free — 10 AI descriptions per month, unlimited magnification and on-device OCR. Pro £1.99/month — 100 AI descriptions. Pro+ £3.99/month — unlimited AI descriptions.",
   },
   {
     slug: "togetherly",
@@ -278,8 +269,6 @@ export const appDetails: AppDetail[] = [
         ],
       },
     ],
-    pricing:
-      "Free — one connection, standard check-in window. Togetherly Care £2.49/month — multiple connections, custom check-in windows, and priority SOS notifications.",
   },
 ];
 

@@ -66,9 +66,9 @@ export const apps: App[] = [
   {
     name: "Greenman",
     slug: "greenman",
-    tagline: "Trails & wilderness, mapped",
+    tagline: "Folk craft & the old tradition",
     description:
-      "A hiking trail reference app with location mapping and route information for walkers and explorers.",
+      "A British folk craft reference app — a working grimoire of herbs, spells, crystals, and lore drawn from the tradition as it was actually practised in these islands.",
     status: "live",
     category: "lore",
     platform: "Android",
