@@ -155,9 +155,10 @@ export const apps: App[] = [
     tagline: "Clarity from complexity",
     description:
       "Paste any dense, jargon-filled text and get it translated into plain, readable English — instantly.",
-    status: "in-development",
+    status: "live",
     category: "fun",
     platform: "Android",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.knoodlepotstudio.plainenglish",
     privacyPath: "/plain-english-please/privacy",
     termsPath: "/plain-english-please/terms",
   },
