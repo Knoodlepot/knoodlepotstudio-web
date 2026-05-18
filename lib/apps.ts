@@ -100,18 +100,6 @@ export const apps: App[] = [
 
   /* ── Utility ── */
   {
-    name: "Lunettes",
-    slug: "lunettes",
-    tagline: "Every book, given a voice",
-    description:
-      "A premium AI reading app for dyslexia, visual impairment, and ADHD — built to feel like a luxury product. Claude reads emotional context; ElevenLabs delivers it with matching pitch, pace, and tone. A chase scene sounds like a chase scene.",
-    status: "in-development",
-    category: "utility",
-    platform: "Android",
-    privacyPath: "/lunettes/privacy",
-    termsPath: "/lunettes/terms",
-  },
-  {
     name: "Describr",
     slug: "describr",
     tagline: "See the world described",

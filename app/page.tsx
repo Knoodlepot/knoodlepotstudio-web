@@ -142,12 +142,12 @@ export default function Home() {
       {/* ── Hero ── */}
       <section
         style={{
-          padding: "6rem 1.5rem 5rem",
+          padding: "3rem 1.5rem 3rem",
           textAlign: "center",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          gap: "1.5rem",
+          gap: "1rem",
         }}
       >
         <p
