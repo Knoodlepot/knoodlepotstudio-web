@@ -158,78 +158,173 @@ export default function Home() {
       </nav>
 
       {/* ── Hero ── */}
-      <section
+      <div
         style={{
-          padding: "3rem 1.5rem 3rem",
-          textAlign: "center",
+          maxWidth: "1100px",
+          margin: "0 auto",
+          width: "100%",
+          padding: "2rem 1.5rem",
           display: "flex",
-          flexDirection: "column",
+          flexWrap: "wrap" as const,
+          gap: "2rem",
           alignItems: "center",
-          gap: "1rem",
         }}
       >
-        <p
+        {/* Left: Great communities */}
+        <div style={{ flex: "1", minWidth: "280px" }}>
+          <div
+            style={{
+              border: "1px solid var(--border)",
+              borderRadius: "8px",
+              background: "var(--surface)",
+              padding: "1.25rem",
+              display: "flex",
+              flexDirection: "column" as const,
+              gap: "1rem",
+            }}
+          >
+            <p
+              style={{
+                fontFamily: "var(--font-cinzel)",
+                fontSize: "0.65rem",
+                letterSpacing: "0.2em",
+                textTransform: "uppercase" as const,
+                color: "var(--gold)",
+                margin: 0,
+              }}
+            >
+              Great Communities
+            </p>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
+              {/* BetaTribe */}
+              <a href="https://betatribe.app/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+                <div
+                  style={{
+                    border: "1px solid var(--border)",
+                    borderRadius: "6px",
+                    padding: "1rem",
+                    background: "var(--bg)",
+                    display: "flex",
+                    flexDirection: "column" as const,
+                    gap: "0.4rem",
+                    height: "100%",
+                    boxSizing: "border-box" as const,
+                  }}
+                >
+                  <p style={{ fontFamily: "var(--font-cinzel)", fontSize: "0.6rem", letterSpacing: "0.15em", textTransform: "uppercase" as const, color: "var(--gold)", margin: 0 }}>
+                    Beta Testers
+                  </p>
+                  <p style={{ fontFamily: "var(--font-playfair)", fontSize: "0.85rem", color: "var(--text)", margin: 0, lineHeight: 1.5 }}>
+                    Help shape our apps before they launch
+                  </p>
+                  <p style={{ fontFamily: "var(--font-playfair)", fontStyle: "italic", fontSize: "0.75rem", color: "var(--text-muted)", margin: 0 }}>
+                    Join us on BetaTribe →
+                  </p>
+                </div>
+              </a>
+              {/* LaunchIgniter */}
+              <a
+                href="https://launchigniter.com/product/greenman?ref=badge-greenman"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  border: "1px solid var(--border)",
+                  borderRadius: "6px",
+                  padding: "1rem",
+                  background: "var(--bg)",
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://launchigniter.com/api/badge/greenman?theme=dark"
+                  alt="Featured on LaunchIgniter"
+                  width={212}
+                  height={55}
+                  style={{ display: "block", maxWidth: "100%", height: "auto" }}
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Right: Hero content */}
+        <section
           style={{
-            fontFamily: "var(--font-cinzel)",
-            fontSize: "0.7rem",
-            letterSpacing: "0.25em",
-            textTransform: "uppercase",
-            color: "var(--gold)",
-            margin: 0,
+            flex: "1",
+            minWidth: "280px",
+            textAlign: "center",
+            display: "flex",
+            flexDirection: "column" as const,
+            alignItems: "center",
+            gap: "1rem",
           }}
         >
-          Independent Studio
-        </p>
+          <p
+            style={{
+              fontFamily: "var(--font-cinzel)",
+              fontSize: "0.7rem",
+              letterSpacing: "0.25em",
+              textTransform: "uppercase" as const,
+              color: "var(--gold)",
+              margin: 0,
+            }}
+          >
+            Independent Studio
+          </p>
 
-        <h1
-          style={{
-            fontFamily: "var(--font-cinzel)",
-            fontSize: "clamp(2rem, 6vw, 3.75rem)",
-            fontWeight: 700,
-            letterSpacing: "0.08em",
-            lineHeight: 1.15,
-            color: "var(--text)",
-            margin: 0,
-            maxWidth: "720px",
-          }}
-        >
-          Knoodlepot Studio
-        </h1>
+          <h1
+            style={{
+              fontFamily: "var(--font-cinzel)",
+              fontSize: "clamp(2rem, 6vw, 3.75rem)",
+              fontWeight: 700,
+              letterSpacing: "0.08em",
+              lineHeight: 1.15,
+              color: "var(--text)",
+              margin: 0,
+              maxWidth: "720px",
+            }}
+          >
+            Knoodlepot Studio
+          </h1>
 
-        <p
-          style={{
-            fontFamily: "var(--font-playfair)",
-            fontStyle: "italic",
-            fontSize: "clamp(1rem, 2.5vw, 1.35rem)",
-            color: "var(--text-muted)",
-            margin: 0,
-            maxWidth: "540px",
-            lineHeight: 1.6,
-          }}
-        >
-          Apps steeped in myth, lore, and Victorian wonder
-        </p>
+          <p
+            style={{
+              fontFamily: "var(--font-playfair)",
+              fontStyle: "italic",
+              fontSize: "clamp(1rem, 2.5vw, 1.35rem)",
+              color: "var(--text-muted)",
+              margin: 0,
+              maxWidth: "540px",
+              lineHeight: 1.6,
+            }}
+          >
+            Apps steeped in myth, lore, and Victorian wonder
+          </p>
 
-        <GoldRule />
+          <GoldRule />
 
-        <a
-          href="#apps"
-          style={{
-            fontFamily: "var(--font-cinzel)",
-            fontSize: "0.75rem",
-            letterSpacing: "0.15em",
-            textTransform: "uppercase",
-            color: "var(--bg)",
-            background: "var(--gold)",
-            padding: "0.65rem 1.75rem",
-            borderRadius: "4px",
-            textDecoration: "none",
-            marginTop: "0.5rem",
-          }}
-        >
-          Explore the Collection
-        </a>
-      </section>
+          <a
+            href="#apps"
+            style={{
+              fontFamily: "var(--font-cinzel)",
+              fontSize: "0.75rem",
+              letterSpacing: "0.15em",
+              textTransform: "uppercase" as const,
+              color: "var(--bg)",
+              background: "var(--gold)",
+              padding: "0.65rem 1.75rem",
+              borderRadius: "4px",
+              textDecoration: "none",
+              marginTop: "0.5rem",
+            }}
+          >
+            Explore the Collection
+          </a>
+        </section>
+      </div>
 
       {/* ── Apps by Section ── */}
       <div
@@ -325,72 +420,6 @@ export default function Home() {
           );
         })}
       </div>
-
-      {/* ── Beta Testers ── */}
-      <section
-        style={{
-          padding: "3rem 1.5rem",
-          maxWidth: "720px",
-          margin: "0 auto",
-          width: "100%",
-          textAlign: "center",
-        }}
-      >
-        <a
-          href="https://betatribe.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ textDecoration: "none" }}
-        >
-          <div
-            style={{
-              border: "1px solid var(--border)",
-              borderRadius: "8px",
-              padding: "1.75rem 2rem",
-              background: "var(--surface)",
-              display: "flex",
-              flexDirection: "column",
-              gap: "0.6rem",
-              alignItems: "center",
-              transition: "border-color 0.2s",
-            }}
-          >
-            <p
-              style={{
-                fontFamily: "var(--font-cinzel)",
-                fontSize: "0.65rem",
-                letterSpacing: "0.2em",
-                textTransform: "uppercase",
-                color: "var(--gold)",
-                margin: 0,
-              }}
-            >
-              Beta Testers
-            </p>
-            <p
-              style={{
-                fontFamily: "var(--font-playfair)",
-                fontSize: "1.05rem",
-                color: "var(--text)",
-                margin: 0,
-              }}
-            >
-              Help shape our apps before they launch
-            </p>
-            <p
-              style={{
-                fontFamily: "var(--font-playfair)",
-                fontStyle: "italic",
-                fontSize: "0.875rem",
-                color: "var(--text-muted)",
-                margin: 0,
-              }}
-            >
-              Join our community of testers on BetaTribe →
-            </p>
-          </div>
-        </a>
-      </section>
 
       {/* ── About ── */}
       <section
