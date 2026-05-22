@@ -37,7 +37,7 @@ export default function LunettesPrivacy() {
       <Section title="4. Third-Party Services">
         <p>The following third-party services process data on our behalf:</p>
         <ul style={styles.list}>
-          <li><strong>Supabase</strong> — authentication, cloud database, and storage. Your email address, reading preferences, and imported documents are stored on Supabase servers (EU region where available). <a href="https://supabase.com/privacy" style={styles.link}>Supabase Privacy Policy</a></li>
+          <li><strong>Firebase</strong> — authentication, cloud database, and storage. Your email address, reading preferences, and imported documents are stored on Firebase servers (EU region where available). <a href="https://firebase.google.com/support/privacy" style={styles.link}>Firebase Privacy &amp; Security</a></li>
           <li><strong>Anthropic</strong> — page text is sent to Anthropic&apos;s Claude API to detect emotional context for narration. Anthropic may retain API inputs for safety purposes in accordance with their policy. <a href="https://www.anthropic.com/privacy" style={styles.link}>Anthropic Privacy Policy</a></li>
           <li><strong>ElevenLabs</strong> — narration instructions and page text are sent to ElevenLabs for voice synthesis. <a href="https://elevenlabs.io/privacy" style={styles.link}>ElevenLabs Privacy Policy</a></li>
           <li><strong>RevenueCat</strong> — subscription and purchase management. RevenueCat collects a device identifier and purchase history. <a href="https://www.revenuecat.com/privacy" style={styles.link}>RevenueCat Privacy Policy</a></li>

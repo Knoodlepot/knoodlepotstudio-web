@@ -32,7 +32,7 @@ export default function TogetherlyPrivacy() {
       <Section title="4. Third-Party Services">
         <p>The following third-party services process data on our behalf:</p>
         <ul style={styles.list}>
-          <li><strong>Supabase</strong> — real-time database. Check-in status, connection codes, and notification windows are stored on Supabase servers (EU region where available). <a href="https://supabase.com/privacy" style={styles.link}>Supabase Privacy Policy</a></li>
+          <li><strong>Firebase</strong> — real-time database. Check-in status, connection codes, and notification windows are stored on Firebase servers (EU region where available). <a href="https://firebase.google.com/support/privacy" style={styles.link}>Firebase Privacy &amp; Security</a></li>
           <li><strong>Firebase Cloud Messaging</strong> — push notifications are delivered via Google&apos;s FCM service using your device token. <a href="https://policies.google.com/privacy" style={styles.link}>Google Privacy Policy</a></li>
         </ul>
       </Section>
