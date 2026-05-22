@@ -1,4 +1,3 @@
-import Script from "next/script";
 import ThemeToggle from "@/components/ThemeToggle";
 import AppCard from "@/components/AppCard";
 import { apps, sections, statusOrder } from "@/lib/apps";
@@ -215,14 +214,6 @@ export default function Home() {
         </p>
 
         <GoldRule />
-
-        {/* Selene waitlist embed */}
-        <div
-          data-selene-waitlist
-          data-selene-api="https://selene-waitlist.vercel.app/api/subscribe"
-          style={{ width: "100%", maxWidth: "480px" }}
-        />
-        <Script src="https://selene-waitlist.vercel.app/embed.js" strategy="afterInteractive" />
       </section>
 
       {/* ── Apps by Section ── */}
