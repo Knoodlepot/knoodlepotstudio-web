@@ -385,7 +385,30 @@ export default function Home() {
         >
           Great Communities
         </p>
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ display: "flex", flexWrap: "wrap" as const, justifyContent: "center", gap: "0.75rem" }}>
+          {/* BetaTribe */}
+          <a
+            href="https://betatribe.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              border: "1px solid var(--border)",
+              borderRadius: "6px",
+              padding: "1rem 1.5rem",
+              background: "var(--surface)",
+              fontFamily: "var(--font-cinzel)",
+              fontSize: "0.75rem",
+              letterSpacing: "0.1em",
+              color: "var(--gold)",
+              textDecoration: "none",
+            }}
+          >
+            BetaTribe
+          </a>
+          {/* LaunchIgniter */}
           <a
             href="https://launchigniter.com/product/greenman?ref=badge-greenman"
             target="_blank"
