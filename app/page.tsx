@@ -197,7 +197,7 @@ export default function Home() {
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "0.75rem" }}>
               {/* LaunchIgniter */}
-              <
+              <a
                 href="https://launchigniter.com/product/greenman?ref=badge-greenman"
                 target="_blank"
                 rel="noopener noreferrer"
