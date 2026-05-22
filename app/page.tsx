@@ -388,7 +388,7 @@ export default function Home() {
         <div style={{ display: "flex", flexWrap: "wrap" as const, justifyContent: "center", gap: "0.75rem" }}>
           {/* BetaTribe */}
           <a
-            href="https://betatribe.app/"
+            href="https://betatribe.app/join?ref=knoodlepotstudios"
             target="_blank"
             rel="noopener noreferrer"
             style={{
