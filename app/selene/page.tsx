@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import WaitlistForm from "@/components/WaitlistForm";
 
 export const metadata: Metadata = {
   title: "Selene — Private Period Tracking",
@@ -402,35 +403,7 @@ export default function SelenePage() {
         <p style={s.overline}>Launch</p>
         <h2 style={s.heading}>Be the first to know when Selene launches.</h2>
 
-        {/* TODO: replace with chairman's Mailchimp form action URL */}
-        <form
-          action="#"
-          method="POST"
-          style={{ marginTop: "1.5rem" }}
-          onSubmit={(e) => e.preventDefault()}
-        >
-          <label htmlFor="email" style={{ display: "none" }}>
-            Email address
-          </label>
-          <input
-            id="email"
-            type="email"
-            name="EMAIL"
-            placeholder="your@email.com"
-            required
-            style={s.input}
-            aria-label="Email address for launch notification"
-          />
-          <button type="submit" style={s.ctaBtn}>
-            Notify me
-          </button>
-        </form>
-
-        <p style={s.microcopy}>
-          We don&apos;t need your name, your cycle, or anything else. Just an
-          email address. We&apos;ll send one message when Selene is live, then
-          nothing more.
-        </p>
+        <WaitlistForm />
       </section>
 
       {/* ── Footer ── */}
