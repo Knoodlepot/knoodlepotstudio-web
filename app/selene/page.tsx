@@ -181,6 +181,7 @@ const s = {
 export default function SelenePage() {
   return (
     <div style={s.page}>
+
       {/* ── Hero ── */}
       <section
         style={{
