@@ -1,3 +1,4 @@
+import Script from "next/script";
 import ThemeToggle from "@/components/ThemeToggle";
 import AppCard from "@/components/AppCard";
 import { apps, sections, statusOrder } from "@/lib/apps";
@@ -158,147 +159,71 @@ export default function Home() {
       </nav>
 
       {/* ── Hero ── */}
-      <div
+      <section
         style={{
           maxWidth: "1100px",
           margin: "0 auto",
           width: "100%",
           padding: "2rem 1.5rem",
+          textAlign: "center",
           display: "flex",
-          flexWrap: "wrap" as const,
-          gap: "2rem",
+          flexDirection: "column" as const,
           alignItems: "center",
+          gap: "1rem",
         }}
       >
-        {/* Left: Great communities */}
-        <div style={{ flex: "1", minWidth: "280px" }}>
-          <div
-            style={{
-              border: "1px solid var(--border)",
-              borderRadius: "8px",
-              background: "var(--surface)",
-              padding: "1.25rem",
-              display: "flex",
-              flexDirection: "column" as const,
-              gap: "1rem",
-            }}
-          >
-            <p
-              style={{
-                fontFamily: "var(--font-cinzel)",
-                fontSize: "0.65rem",
-                letterSpacing: "0.2em",
-                textTransform: "uppercase" as const,
-                color: "var(--gold)",
-                margin: 0,
-              }}
-            >
-              Great Communities
-            </p>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "0.75rem" }}>
-              {/* LaunchIgniter */}
-              <a
-                href="https://launchigniter.com/product/greenman?ref=badge-greenman"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  border: "1px solid var(--border)",
-                  borderRadius: "6px",
-                  padding: "1rem",
-                  background: "var(--bg)",
-                }}
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://launchigniter.com/api/badge/greenman?theme=dark"
-                  alt="Featured on LaunchIgniter"
-                  width={212}
-                  height={55}
-                  style={{ display: "block", maxWidth: "100%", height: "auto" }}
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Right: Hero content */}
-        <section
+        <p
           style={{
-            flex: "1",
-            minWidth: "280px",
-            textAlign: "center",
-            display: "flex",
-            flexDirection: "column" as const,
-            alignItems: "center",
-            gap: "1rem",
+            fontFamily: "var(--font-cinzel)",
+            fontSize: "0.7rem",
+            letterSpacing: "0.25em",
+            textTransform: "uppercase" as const,
+            color: "var(--gold)",
+            margin: 0,
           }}
         >
-          <p
-            style={{
-              fontFamily: "var(--font-cinzel)",
-              fontSize: "0.7rem",
-              letterSpacing: "0.25em",
-              textTransform: "uppercase" as const,
-              color: "var(--gold)",
-              margin: 0,
-            }}
-          >
-            Independent Studio
-          </p>
+          Independent Studio
+        </p>
 
-          <h1
-            style={{
-              fontFamily: "var(--font-cinzel)",
-              fontSize: "clamp(2rem, 6vw, 3.75rem)",
-              fontWeight: 700,
-              letterSpacing: "0.08em",
-              lineHeight: 1.15,
-              color: "var(--text)",
-              margin: 0,
-              maxWidth: "720px",
-            }}
-          >
-            Knoodlepot Studio
-          </h1>
+        <h1
+          style={{
+            fontFamily: "var(--font-cinzel)",
+            fontSize: "clamp(2rem, 6vw, 3.75rem)",
+            fontWeight: 700,
+            letterSpacing: "0.08em",
+            lineHeight: 1.15,
+            color: "var(--text)",
+            margin: 0,
+            maxWidth: "720px",
+          }}
+        >
+          Knoodlepot Studio
+        </h1>
 
-          <p
-            style={{
-              fontFamily: "var(--font-playfair)",
-              fontStyle: "italic",
-              fontSize: "clamp(1rem, 2.5vw, 1.35rem)",
-              color: "var(--text-muted)",
-              margin: 0,
-              maxWidth: "540px",
-              lineHeight: 1.6,
-            }}
-          >
-            Apps steeped in myth, lore, and Victorian wonder
-          </p>
+        <p
+          style={{
+            fontFamily: "var(--font-playfair)",
+            fontStyle: "italic",
+            fontSize: "clamp(1rem, 2.5vw, 1.35rem)",
+            color: "var(--text-muted)",
+            margin: 0,
+            maxWidth: "540px",
+            lineHeight: 1.6,
+          }}
+        >
+          Apps steeped in myth, lore, and Victorian wonder
+        </p>
 
-          <GoldRule />
+        <GoldRule />
 
-          <a
-            href="#apps"
-            style={{
-              fontFamily: "var(--font-cinzel)",
-              fontSize: "0.75rem",
-              letterSpacing: "0.15em",
-              textTransform: "uppercase" as const,
-              color: "var(--bg)",
-              background: "var(--gold)",
-              padding: "0.65rem 1.75rem",
-              borderRadius: "4px",
-              textDecoration: "none",
-              marginTop: "0.5rem",
-            }}
-          >
-            Explore the Collection
-          </a>
-        </section>
-      </div>
+        {/* Selene waitlist embed */}
+        <div
+          data-selene-waitlist
+          data-selene-api="https://selene-waitlist.vercel.app/api/subscribe"
+          style={{ width: "100%", maxWidth: "480px" }}
+        />
+        <Script src="https://selene-waitlist.vercel.app/embed.js" strategy="afterInteractive" />
+      </section>
 
       {/* ── Apps by Section ── */}
       <div
@@ -444,6 +369,56 @@ export default function Home() {
           Every app is crafted with care — designed to feel different from the ordinary,
           rooted in history, and worth your time.
         </p>
+      </section>
+
+      {/* ── Great Communities ── */}
+      <section
+        style={{
+          borderTop: "1px solid var(--border)",
+          padding: "3rem 1.5rem",
+          maxWidth: "720px",
+          margin: "0 auto",
+          width: "100%",
+          textAlign: "center",
+        }}
+      >
+        <p
+          style={{
+            fontFamily: "var(--font-cinzel)",
+            fontSize: "0.65rem",
+            letterSpacing: "0.2em",
+            textTransform: "uppercase" as const,
+            color: "var(--gold)",
+            marginBottom: "1.5rem",
+          }}
+        >
+          Great Communities
+        </p>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <a
+            href="https://launchigniter.com/product/greenman?ref=badge-greenman"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              border: "1px solid var(--border)",
+              borderRadius: "6px",
+              padding: "1rem",
+              background: "var(--surface)",
+            }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://launchigniter.com/api/badge/greenman?theme=dark"
+              alt="Featured on LaunchIgniter"
+              width={212}
+              height={55}
+              style={{ display: "block", maxWidth: "100%", height: "auto" }}
+            />
+          </a>
+        </div>
       </section>
 
       {/* ── Footer ── */}
