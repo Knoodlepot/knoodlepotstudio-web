@@ -51,7 +51,9 @@ const s = {
 export default function WaitlistForm() {
   return (
     <>
-      {/* TODO: replace with chairman's Mailchimp form action URL */}
+      {/* TODO: swap in your Brevo embedded form code
+          Chairman: Brevo dashboard → Contacts → Forms → Create a subscription form → Get embed code.
+          Paste the <form> tag's action URL here and remove the onSubmit preventDefault. */}
       <form
         action="#"
         method="POST"
