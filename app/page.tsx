@@ -195,35 +195,9 @@ export default function Home() {
             >
               Great Communities
             </p>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
-              {/* BetaTribe */}
-              <a href="https://betatribe.app/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
-                <div
-                  style={{
-                    border: "1px solid var(--border)",
-                    borderRadius: "6px",
-                    padding: "1rem",
-                    background: "var(--bg)",
-                    display: "flex",
-                    flexDirection: "column" as const,
-                    gap: "0.4rem",
-                    height: "100%",
-                    boxSizing: "border-box" as const,
-                  }}
-                >
-                  <p style={{ fontFamily: "var(--font-cinzel)", fontSize: "0.6rem", letterSpacing: "0.15em", textTransform: "uppercase" as const, color: "var(--gold)", margin: 0 }}>
-                    Beta Testers
-                  </p>
-                  <p style={{ fontFamily: "var(--font-playfair)", fontSize: "0.85rem", color: "var(--text)", margin: 0, lineHeight: 1.5 }}>
-                    Help shape our apps before they launch
-                  </p>
-                  <p style={{ fontFamily: "var(--font-playfair)", fontStyle: "italic", fontSize: "0.75rem", color: "var(--text-muted)", margin: 0 }}>
-                    Join us on BetaTribe →
-                  </p>
-                </div>
-              </a>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "0.75rem" }}>
               {/* LaunchIgniter */}
-              <a
+              <
                 href="https://launchigniter.com/product/greenman?ref=badge-greenman"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -560,20 +534,6 @@ export default function Home() {
               }}
             >
               <GitHubIcon /> GitHub
-            </a>
-            <a
-              href="https://betatribe.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                fontFamily: "var(--font-cinzel)",
-                fontSize: "0.7rem",
-                letterSpacing: "0.08em",
-                color: "var(--text-muted)",
-                textDecoration: "none",
-              }}
-            >
-              BetaTribe
             </a>
           </div>
 
