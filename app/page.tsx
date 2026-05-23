@@ -405,14 +405,14 @@ export default function Home() {
                 textAlign: "left",
               }}
             >
-              <p style={{ fontFamily: "var(--font-cinzel)", fontSize: "0.6rem", letterSpacing: "0.15em", textTransform: "uppercase" as const, color: "var(--gold)", margin: 0 }}>
-                Beta Testers
+              <p style={{ fontFamily: "var(--font-cinzel)", fontSize: "0.85rem", letterSpacing: "0.1em", color: "var(--gold)", margin: 0 }}>
+                Beta Tribe🐝
               </p>
               <p style={{ fontFamily: "var(--font-playfair)", fontSize: "0.85rem", color: "var(--text)", margin: 0, lineHeight: 1.5 }}>
                 Help shape our apps before they launch
               </p>
               <p style={{ fontFamily: "var(--font-playfair)", fontStyle: "italic", fontSize: "0.75rem", color: "var(--text-muted)", margin: 0 }}>
-                Join us on BetaTribe →
+                Join us to Beta Test →
               </p>
             </div>
           </a>
