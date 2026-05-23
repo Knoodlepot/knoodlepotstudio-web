@@ -391,22 +391,30 @@ export default function Home() {
             href="https://betatribe.app/join?ref=knoodlepotstudios"
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              border: "1px solid var(--border)",
-              borderRadius: "6px",
-              padding: "1rem 1.5rem",
-              background: "var(--surface)",
-              fontFamily: "var(--font-cinzel)",
-              fontSize: "0.75rem",
-              letterSpacing: "0.1em",
-              color: "var(--gold)",
-              textDecoration: "none",
-            }}
+            style={{ textDecoration: "none" }}
           >
-            BetaTribe
+            <div
+              style={{
+                border: "1px solid var(--border)",
+                borderRadius: "6px",
+                padding: "1rem",
+                background: "var(--surface)",
+                display: "flex",
+                flexDirection: "column" as const,
+                gap: "0.4rem",
+                textAlign: "left",
+              }}
+            >
+              <p style={{ fontFamily: "var(--font-cinzel)", fontSize: "0.6rem", letterSpacing: "0.15em", textTransform: "uppercase" as const, color: "var(--gold)", margin: 0 }}>
+                Beta Testers
+              </p>
+              <p style={{ fontFamily: "var(--font-playfair)", fontSize: "0.85rem", color: "var(--text)", margin: 0, lineHeight: 1.5 }}>
+                Help shape our apps before they launch
+              </p>
+              <p style={{ fontFamily: "var(--font-playfair)", fontStyle: "italic", fontSize: "0.75rem", color: "var(--text-muted)", margin: 0 }}>
+                Join us on BetaTribe →
+              </p>
+            </div>
           </a>
           {/* LaunchIgniter */}
           <a
