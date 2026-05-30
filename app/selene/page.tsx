@@ -403,7 +403,7 @@ export default function SelenePage() {
         <p style={s.overline}>Launch</p>
         <h2 style={s.heading}>Be the first to know when Selene launches.</h2>
 
-        <WaitlistForm />
+        <WaitlistForm appSlug="selene" appName="Selene" />
       </section>
 
       {/* ── Footer ── */}

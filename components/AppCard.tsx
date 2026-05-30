@@ -8,7 +8,7 @@ interface AppCardProps {
 export default function AppCard({ app }: AppCardProps) {
   return (
     <Link
-      href={`/apps/${app.slug}`}
+      href={app.status !== "live" ? `/apps/${app.slug}#waitlist` : `/apps/${app.slug}`}
       style={{ textDecoration: "none", display: "block" }}
     >
     <div
@@ -93,15 +93,31 @@ export default function AppCard({ app }: AppCardProps) {
           marginTop: "0.25rem",
         }}
       >
-        <span
-          style={{
-            fontSize: "0.7rem",
-            color: "var(--text-muted)",
-            fontFamily: "var(--font-cinzel)",
-            letterSpacing: "0.05em",
-          }}
-        >
-          {app.platform}
+        <span style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+          <span
+            style={{
+              fontSize: "0.7rem",
+              color: "var(--text-muted)",
+              fontFamily: "var(--font-cinzel)",
+              letterSpacing: "0.05em",
+            }}
+          >
+            {app.platform}
+          </span>
+
+          {app.status !== "live" && (
+            <span
+              style={{
+                fontSize: "0.7rem",
+                color: "var(--gold)",
+                fontFamily: "var(--font-cinzel)",
+                letterSpacing: "0.05em",
+                opacity: 0.8,
+              }}
+            >
+              Notify Me →
+            </span>
+          )}
         </span>
 
         {app.link && (

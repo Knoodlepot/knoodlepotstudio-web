@@ -53,9 +53,55 @@ function GitHubIcon() {
   );
 }
 
+const organisationJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://knoodlepotstudio.com/#organisation",
+      "name": "Knoodlepot Studio",
+      "url": "https://knoodlepotstudio.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://knoodlepotstudio.com/studio-logo.png",
+      },
+      "description":
+        "Independent mobile app studio based in the United Kingdom, building apps steeped in myth, lore, and Victorian wonder.",
+      "email": "knoodlepot@knoodlepotstudio.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sutton Coldfield",
+        "addressRegion": "Birmingham",
+        "addressCountry": "GB",
+      },
+      "sameAs": [
+        "https://www.instagram.com/knoodlepot_studio/",
+        "https://www.facebook.com/profile.php?id=61589830114090",
+        "https://www.linkedin.com/in/daniel-grommes-0726a140b",
+        "https://github.com/Knoodlepot",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://knoodlepotstudio.com/#website",
+      "url": "https://knoodlepotstudio.com",
+      "name": "Knoodlepot Studio",
+      "publisher": {
+        "@id": "https://knoodlepotstudio.com/#organisation",
+      },
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+
+      {/* ── JSON-LD structured data ── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organisationJsonLd) }}
+      />
 
       {/* ── Navigation ── */}
       <nav
@@ -103,6 +149,18 @@ export default function Home() {
               }}
             >
               Apps
+            </a>
+            <a
+              href="#community"
+              style={{
+                fontSize: "0.8rem",
+                fontFamily: "var(--font-cinzel)",
+                letterSpacing: "0.08em",
+                color: "var(--text-muted)",
+                textDecoration: "none",
+              }}
+            >
+              Community
             </a>
             <a
               href="#about"
@@ -364,6 +422,7 @@ export default function Home() {
 
       {/* ── Great Communities ── */}
       <section
+        id="community"
         style={{
           borderTop: "1px solid var(--border)",
           padding: "3rem 1.5rem",
@@ -415,30 +474,6 @@ export default function Home() {
                 Join us to Beta Test →
               </p>
             </div>
-          </a>
-          {/* LaunchIgniter */}
-          <a
-            href="https://launchigniter.com/product/greenman?ref=badge-greenman"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              border: "1px solid var(--border)",
-              borderRadius: "6px",
-              padding: "1rem",
-              background: "var(--surface)",
-            }}
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://launchigniter.com/api/badge/greenman?theme=dark"
-              alt="Featured on LaunchIgniter"
-              width={212}
-              height={55}
-              style={{ display: "block", maxWidth: "100%", height: "auto" }}
-            />
           </a>
         </div>
       </section>

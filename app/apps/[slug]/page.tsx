@@ -1,7 +1,44 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { apps, statusLabel, statusColour } from "@/lib/apps";
+import { apps, statusLabel, statusColour, type App } from "@/lib/apps";
 import { getAppDetail } from "@/lib/app-details";
+import WaitlistForm from "@/components/WaitlistForm";
+
+/* Maps the app's internal category to a Schema.org applicationCategory value */
+const schemaCategory: Record<string, string> = {
+  nature: "LifestyleApplication",
+  lore: "LifestyleApplication",
+  utility: "UtilitiesApplication",
+  fun: "UtilitiesApplication",
+};
+
+function buildAppJsonLd(app: App) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": app.name,
+    "description": app.description,
+    "url": `https://knoodlepotstudio.com/apps/${app.slug}`,
+    "applicationCategory": schemaCategory[app.category] ?? "SoftwareApplication",
+    "operatingSystem": app.platform,
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://knoodlepotstudio.com/#organisation",
+      "name": "Knoodlepot Studio",
+    },
+    /* Only include download link and free/paid flag for live apps */
+    ...(app.status === "live" && app.playStoreUrl
+      ? {
+          "downloadUrl": app.playStoreUrl,
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "GBP",
+          },
+        }
+      : {}),
+  };
+}
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -18,6 +55,11 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: `${app.name} — Knoodlepot Studio`,
     description: app.description,
+    twitter: {
+      card: "summary_large_image",
+      title: `${app.name} — Knoodlepot Studio`,
+      description: app.description,
+    },
   };
 }
 
@@ -48,6 +90,12 @@ export default async function AppPage({ params }: Props) {
 
   return (
     <div style={s.page}>
+      {/* ── JSON-LD structured data ── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildAppJsonLd(app)) }}
+      />
+
       <Link href="/#apps" style={s.back}>← The Collection</Link>
 
       <div style={s.container}>
@@ -86,6 +134,19 @@ export default async function AppPage({ params }: Props) {
             <br /><br />
             {app.description}
           </p>
+        )}
+
+        {/* Waitlist — shown for apps that are not yet live */}
+        {app.status !== "live" && (
+          <>
+            <div id="waitlist" style={s.rule} />
+            <p style={s.sectionHeading}>Be First to Know</p>
+            <p style={{ ...s.body, marginBottom: 0 }}>
+              {app.name} isn&apos;t available yet. Leave your email and we&apos;ll
+              notify you the moment it launches — one message, nothing more.
+            </p>
+            <WaitlistForm appSlug={app.slug} appName={app.name} />
+          </>
         )}
 
         {/* Legal links */}

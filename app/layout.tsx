@@ -32,6 +32,12 @@ export const metadata: Metadata = {
     url: "https://knoodlepotstudio.com",
     siteName: "Knoodlepot Studio",
     type: "website",
+    locale: "en_GB",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Knoodlepot Studio",
+    description: "Apps steeped in myth, lore, and Victorian wonder.",
   },
 };
 
@@ -41,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en-GB" suppressHydrationWarning>
       <head>
         {/* Inline script to set dark class before first paint — prevents flash */}
         <script
